@@ -1,5 +1,16 @@
 <template>
   <div class="px-2 py-2">
+    <!-- タブ -->
+    <div class="row">
+      <div
+        v-for="t in tabs"
+        :key="t.key"
+        @click="tab = t.key;"
+        class="col py-3 border text-center"
+        :style="`background-color: ${t.key == tab ? 'cyan' : 'white'};`"
+      >{{ t.label }}</div>
+    </div>
+
     <!-- 簡易情報 -->
     <div v-if="tab == 'basic'" class="form-fields">
 
