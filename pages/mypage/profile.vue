@@ -1,5 +1,6 @@
 <template>
   <div class="px-2 py-2">
+    <!-- 簡易情報 -->
     <div v-if="tab == 'basic'" class="form-fields">
 
       <!-- 郵便番号 -->
@@ -102,6 +103,21 @@
           </select>
         </div>
       </div>
+    </div>
+
+
+
+
+    <!-- 詳細情報 -->
+    <div class="" v-else-if="tab === 'detail'">
+
+    </div>
+
+
+
+    <!-- 家族情報 -->
+    <div class="" v-else-if="tab === 'family'">
+
     </div>
   </div>
 </template>
