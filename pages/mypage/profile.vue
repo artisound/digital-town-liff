@@ -159,6 +159,18 @@
           v-model="details.address1"
         >
       </div>
+
+      <!-- 住所2 -->
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label class="d-block m-0 py-2 form-label">住所2</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          name="name"
+          v-model="details.address2"
+        >
+      </div>
     </div>
 
 
@@ -212,6 +224,7 @@ export default {
       details: {
         name: '',
         address1: '',
+        address2: '',
       },
 
       // 職業一覧
