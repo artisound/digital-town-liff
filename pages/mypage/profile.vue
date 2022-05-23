@@ -114,6 +114,21 @@
           </select>
         </div>
       </div>
+
+      <!-- 職業 -->
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label class="d-block m-0 py-2 form-label">
+          <span>職業</span>
+
+          <select class="form-select">
+            <option
+              v-for="(job, index) in jobs"
+              :key="'job' + index"
+              :value="job"
+            >{{ job }}</option>
+          </select>
+        </label>
+      </div>
     </div>
 
 
@@ -161,7 +176,10 @@ export default {
         year: '',
         month: '',
         day: '',
-      }
+      },
+
+      // 職業一覧
+      jobs: [ '会社員', '公務員', '自営業', '会社役員', '主婦(夫)', 'パート・アルバイト', '無職', 'シルバー世代', 'その他' ]
     }
   },
   created: function() {
