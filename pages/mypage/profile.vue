@@ -136,7 +136,16 @@
 
     <!-- 詳細情報 -->
     <div class="" v-else-if="tab === 'detail'">
-
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label for="name" class="d-block m-0 py-2 form-label">氏名</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          name="name"
+          v-model="details.name"
+        >
+      </div>
     </div>
 
 
@@ -185,6 +194,10 @@ export default {
         year: '',
         month: '',
         day: '',
+      },
+
+      details: {
+        name: '',
       },
 
       // 職業一覧
