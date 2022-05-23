@@ -1,13 +1,18 @@
 export default (context, inject) => {
 
+  /**
+   * @param {Object} params - 各種パラメータ
+   * @param {Object} params.liffId      - LIFF ID
+   * @param {Object} params.redirectUri - ログイン後リダイレクトするURL
+   */
   const liffInit = async (params = {}) => {
 
     return await liff.init({
-      liffId: params.liffId || context.$config.liffId,
-    }).then(_ => {
+      liffId: params.liffId || context.$config.liffId_top,
+    }).then(async _ => {
       if (liff.isLoggedIn() ) {
         return {
-          profile: liff.getProfile(),
+          profile: await liff.getProfile(),
           idToken: liff.getIDToken(),
         }
       } else {
@@ -20,10 +25,8 @@ export default (context, inject) => {
     }).catch((err) => {
       console.error(err.code, err.message);
     });
-
   }
-
+  
   inject('liff', liffInit);
   context.$liff = liffInit;
-
 }

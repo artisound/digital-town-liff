@@ -58,7 +58,7 @@ export default {
   },
 
   publicRuntimeConfig: {
-    liffId: '1655895861-0nxQr85M'
+    liffId_top: '1655895861-0nxQr85M'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -68,7 +68,7 @@ export default {
   server: {
     port: 3000,
     host: "localhost",
-    https: {
+    https: process.env.NODE_ENV != 'development' ? {} : {
       key: fs.readFileSync(path.resolve(__dirname, "localhost-key.pem")),
       cert: fs.readFileSync(path.resolve(__dirname, "localhost.pem"))
     },
