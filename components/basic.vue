@@ -73,7 +73,7 @@
           v-model="birthday.year"
           name="birth_year"
         >
-          <option value="0" selected>---</option>
+          <option value="0">---</option>
           <option
             v-for="yyyy of  120"
             :key="yyyy"
@@ -82,7 +82,7 @@
         </select>
 
         <select class="form-select" v-model="birthday.month" name="birth_month">
-          <option value="0" selected>---</option>
+          <option value="0">---</option>
           <option
             v-for="m of 12"
             :key="m"
@@ -91,7 +91,7 @@
         </select>
 
         <select class="form-select" v-model="birthday.date" name="birth_date">
-          <option value="0" selected>---</option>
+          <option value="0">---</option>
           <option
             v-for="d of Number($dayjs($dayjs('2022/06/22').endOf('m')).format('D'))"
             :key="d"

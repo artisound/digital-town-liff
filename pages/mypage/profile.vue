@@ -75,9 +75,9 @@ export default {
       },
 
       birthday: {
-        year: '',
-        month: '',
-        day: '',
+        year: 0,
+        month: 0,
+        date: 0,
       },
       
       details: {
