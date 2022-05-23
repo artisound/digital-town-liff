@@ -145,6 +145,15 @@
     <div class="" v-else-if="tab === 'family'">
 
     </div>
+
+    <!-- 保存ボタン -->
+    <div class="d-flex justify-content-center align-items-center">
+      <button
+        type="button"
+        class="btn btn-primary"
+        @click="onSave()"
+      >保存</button>
+    </div>
   </div>
 </template>
 
@@ -188,6 +197,8 @@ export default {
   mounted: async function() {
   },
   methods: {
+    async onSave() {
+    }
   },
 }
 </script>
