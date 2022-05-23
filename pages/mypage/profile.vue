@@ -1,7 +1,7 @@
 <template>
   <div class="px-2 py-2">
     <!-- タブ -->
-    <div class="row overflow-hidden">
+    <div class="d-flex">
       <div
         v-for="t in tabs"
         :key="t.key"
@@ -136,6 +136,7 @@
 
     <!-- 詳細情報 -->
     <div class="" v-else-if="tab === 'detail'">
+      <!-- 氏名 -->
       <div class="form-field mb-3 pb-3 border-bottom">
         <label for="name" class="d-block m-0 py-2 form-label">氏名</label>
         <input
@@ -144,6 +145,18 @@
           class="form-control"
           name="name"
           v-model="details.name"
+        >
+      </div>
+
+      <!-- 住所1 -->
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label class="d-block m-0 py-2 form-label">住所1</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          name="name"
+          v-model="details.address1"
         >
       </div>
     </div>
@@ -198,6 +211,7 @@ export default {
 
       details: {
         name: '',
+        address1: '',
       },
 
       // 職業一覧
