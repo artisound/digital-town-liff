@@ -138,10 +138,10 @@
     <div class="" v-else-if="tab === 'detail'">
       <!-- 氏名 -->
       <div class="form-field mb-3 pb-3 border-bottom">
-        <label for="name" class="d-block m-0 py-2 form-label">氏名</label>
+        <label for="field-name" class="d-block m-0 py-2 form-label">氏名</label>
         <input
           type="text"
-          id="name"
+          id="field-name"
           class="form-control"
           name="name"
           v-model="details.name"
