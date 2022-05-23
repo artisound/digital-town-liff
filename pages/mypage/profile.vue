@@ -268,8 +268,7 @@ export default {
 
   },
   mounted: async function() {
-    const day = this.$dayjs(new Date());
-    this.mY = Number(day.format('YYYY'));
+    this.mY = Number(this.$dayjs().format('YYYY'));
   },
   methods: {
     async onSave() {
