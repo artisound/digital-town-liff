@@ -121,23 +121,12 @@
 <script>
 export default {
   props: {
+    profile: { type: Object, default: {} },
+    birthday: { type: Object, default: {} },
     mY: { type: Number, default: 0 }
   },
   data() {
     return {
-      profile: {
-        zip_code: '',
-        address: '',
-        gender: '',
-      },
-
-      birthday: {
-        year: '',
-        month: '',
-        day: '',
-      },
-
-      
       // 職業一覧
       jobs: [ '会社員', '公務員', '自営業', '会社役員', '主婦(夫)', 'パート・アルバイト', '無職', 'シルバー世代', 'その他' ]
     }

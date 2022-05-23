@@ -13,7 +13,12 @@
 
     <!-- 簡易情報 -->
     <div v-if="tab == 'basic'" class="form-fields">
-      <basic :mY="mY"></basic>      
+      <basic
+        :profile="profile"
+        :birthday="birthday"
+        :mY="mY"
+
+      ></basic>      
     </div>
 
 
@@ -245,6 +250,18 @@ export default {
       ],
       tab: 'basic',
 
+      profile: {
+        zip_code: '',
+        address: '',
+        gender: '',
+      },
+
+      birthday: {
+        year: '',
+        month: '',
+        day: '',
+      },
+      
       details: {
         name: '',
         address1: '',
