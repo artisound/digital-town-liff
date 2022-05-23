@@ -1,7 +1,7 @@
 <template>
   <div class="px-2 py-2">
     <!-- タブ -->
-    <div class="row">
+    <div class="row overflow-hidden">
       <div
         v-for="t in tabs"
         :key="t.key"
