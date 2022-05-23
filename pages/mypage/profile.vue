@@ -171,6 +171,17 @@
           v-model="details.address2"
         >
       </div>
+
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label for="field-phone" class="d-block m-0 py-2 form-label">携帯電話番号</label>
+        <input
+          type="tel"
+          id="field-phone"
+          class="form-control"
+          name="phone"
+          v-model="details.tel"
+        >
+      </div>
     </div>
 
 
@@ -225,6 +236,7 @@ export default {
         name: '',
         address1: '',
         address2: '',
+        tel: '',
       },
 
       // 職業一覧
