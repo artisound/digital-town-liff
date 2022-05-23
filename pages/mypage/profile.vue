@@ -7,7 +7,7 @@
         :key="t.key"
         @click="tab = t.key;"
         class="col py-3 border text-center"
-        :style="`background-color: ${t.key == tab ? 'cyan' : 'white'};`"
+        :style="t.key == tab ? '--bs-bg-opacity: .7; background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity)); color: white;' : ''"
       >{{ t.label }}</div>
     </div>
 
