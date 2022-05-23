@@ -97,7 +97,7 @@
                 :name="'family_' + i + '-birth_year'"
                 style="width:40%;"
               >
-                <option value="" selected>---</option>
+                <option value="0" selected>---</option>
                 <option
                   v-for="yyyy in 100"
                   :key="yyyy"
