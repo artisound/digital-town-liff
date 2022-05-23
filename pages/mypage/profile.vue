@@ -150,12 +150,12 @@
 
       <!-- 住所1 -->
       <div class="form-field mb-3 pb-3 border-bottom">
-        <label class="d-block m-0 py-2 form-label">住所1</label>
+        <label for="field-address1" class="d-block m-0 py-2 form-label">住所1</label>
         <input
           type="text"
-          id="name"
+          id="field-address1"
           class="form-control"
-          name="name"
+          name="address1"
           v-model="details.address1"
         >
       </div>
