@@ -114,7 +114,6 @@ export default {
   },
   methods: {  
     btnAction(e, act) {
-      let thisEl = e.target.parentElement;
       switch (act) {
         case 'cancel':
         case 'close':
