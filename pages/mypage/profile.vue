@@ -1,5 +1,11 @@
 <template>
   <div class="px-2 py-2">
+    <div class="popup popup-accept">
+      <div class="toast-header">
+        <strong class="me-auto text-success">保存完了</strong>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> -->
+      </div>
+    </div>
     <!-- タブ -->
     <div class="d-flex">
       <div
@@ -99,7 +105,47 @@ export default {
   },
   methods: {
     async onSave() {
+      // トーストを表示する
+      this.showToast();
+    },
+    showToast() {
+      const popup_accept = document.querySelector(".popup-accept");
+      popup_accept.classList.add("view");
+      setTimeout(function() {
+        popup_accept.classList.remove("view");
+      }, 3000);
     },
   },
 }
 </script>
+
+<style>
+body {
+  overflow-x: hidden;
+}
+.popup-accept {
+  border: 1px #777 solid;
+  top: 10%;
+}
+
+.popup {
+  width: 25%;
+  border-radius: 8px;
+  position: absolute;
+  right: -350px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.popup .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view {
+  right: 3.5rem !important;
+  transition: 0.5s;
+}
+
+</style>
