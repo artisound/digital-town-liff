@@ -5,7 +5,7 @@
       <div class="header">
         <h1 class="py-2 text-center border-bottom">
           <p class="h5">QRコードで招待する</p>
-          <!-- <qriously :value="url" :size="200" /> -->
+          <img :src="code" alt="">
         </h1>
       </div><!-- /header -->
 
@@ -69,6 +69,7 @@
 </template>
 
 <script>
+import QRCode from 'qrcode'
 const init_url = 'https://liff.line.me/';
 
 export default {
@@ -78,7 +79,8 @@ export default {
       url: '',
       config: {},
       intro_msg: [],
-      liffUser: {}
+      liffUser: {},
+      code: ''
     }
   },
   mounted: async function() {
@@ -99,6 +101,16 @@ export default {
     console.log(init_url);
     console.log(this.config['line']['liff']['lf00']);
     this.url = `${init_url}${this.config['line']['liff']['lf00']}?rec_id=${user_infon.rec_id}`;
+
+    QRCode.toDataURL(this.url, { width: 200 })
+    .then(code => {
+      // コード(URLスキーム)が生成されるので、imgタグのsrc=の中に値を入れましょう
+      console.log(code);
+      this.code = code;
+    })
+    .catch(err => {
+      console.error(err);
+    })
   },
   methods: {  
     btnAction(e, act) {
