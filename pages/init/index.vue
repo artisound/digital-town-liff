@@ -19,5 +19,15 @@
         </div>
       </div>
     </template>
+    
+    <!-- 入力画面 -->
+    <template v-else-if="displayMode == 1">
+      <div class="text-center mb-3 py-2">
+        <span class="d-block py-2 text-primary liff-top-icon">
+          <i class="bi bi-info-circle-fill"></i>
+        </span>
+        <span class="h2 fw-bold text-center">新規登録</span>
+      </div>
+    </template>
   </div>
 </template>
