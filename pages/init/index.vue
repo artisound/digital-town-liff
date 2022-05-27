@@ -89,6 +89,51 @@
           >女性</label>
         </div>
       </div>
+      
+      <!-- 生年月日入力欄 -->
+      <div class="form-field mb-3 pb-3 border-bottom">
+        <label class="d-block m-0 py-2 form-label">
+          <span class="field-required badge bg-danger me-2">必須</span>
+          生年月日
+        </label>
+        <div class="input-group mb-1 field-input">
+          <!-- 年 -->
+          <select
+            name="birth_year"
+            class="form-select"
+            v-model="$v.inputData.$model.birth_year"
+            @change="createBirthday($event.target); $v.inputData.birth_year.$touch();"
+          >
+            <option value="" selected>- 年 -</option>
+            <option v-for="yyyy in 120" :key="yyyy" :value="mY - yyyy + 1">{{ mY - yyyy + 1 }}</option>
+          </select>
+
+          <!-- 月 -->
+          <select
+            name="birth_month"
+            class="form-select"
+            v-model="$v.inputData.$model.birth_month"
+            @change="createBirthday($event.target); $v.inputData.birth_month.$touch();"
+          >
+            <option value="" selected>- 月 -</option>
+            <option v-for="m in 12" :key="m" :value="d">{{ m }}月</option>
+          </select>
+
+          <!-- 日 -->
+          <select
+            name="birth_date"
+            class="form-select"
+            v-model="$v.inputData.$model.birth_date"
+            @change="createBirthday($event.target); $v.inputData.birth_date.$touch();"
+          >
+            <option value="" selected>- 日 -</option>
+            <option v-for="d in maxDay" :key="d" :value="d">{{ d }}日</option>
+          </select>
+        </div>
+        <template v-if="$v.inputData.birth_year.$error || $v.inputData.birth_month.$error || $v.inputData.birth_date.$error">
+          <p class="invalid-feedback is-invalid d-block">生年月日を正しく入力してください。</p>
+        </template>
+      </div>
     </template>
   </div>
 </template>
