@@ -134,6 +134,29 @@
           <p class="invalid-feedback is-invalid d-block">生年月日を正しく入力してください。</p>
         </template>
       </div>
+
+      <!-- ボタン -->
+      <div class="row my-0 mx-auto w-100 mb-5">
+        <div class="row col-12 w-100 m-0 p-0">
+          <!-- キャンセルボタン領域 -->
+          <div class="col-6 p-0 pe-2">
+            <button
+              type="button"
+              class="btn btn-secondary w-100 btn-action"
+              @click="btnAction($event, 'cancel')"
+            >キャンセル</button>
+          </div>
+
+          <!-- 確認ボタン領域 -->
+          <div class="col-6 p-0 ps-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100 btn-action"
+              @click="btnAction($event, 'confirm')"
+            >確認</button>
+          </div>
+        </div>
+      </div>
     </template>
   </div>
 </template>
