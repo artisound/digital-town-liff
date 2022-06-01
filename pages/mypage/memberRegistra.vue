@@ -116,7 +116,7 @@ export default {
     // プロフィールの詳細情報を取得
 
     // テストする場合は以下の処理をコメントアウト解除
-    this.$set(this.profile, 'name', 'タイム 太郎');
+    // this.$set(this.profile, 'name', 'タイム 太郎');
   },
   methods: {
     onEdit() {
