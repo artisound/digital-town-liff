@@ -16,8 +16,6 @@ export default {
     }
   },
   mounted: async function() {
-    console.log('diagnosis', this.liffInfo)
-    console.log(this.$pageTitle)
   },
   methods: {
   }

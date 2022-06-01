@@ -37,8 +37,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/dayjs',  // use "$dayjs"
-    '@/plugins/liff'    // use "$liff" Promise
+    '@/plugins/pageTitle',  // use "$pageTitle"
+    '@/plugins/dayjs',      // use "$dayjs"
+    '@/plugins/liff'        // use "$liff" Promise
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
