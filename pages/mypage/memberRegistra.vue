@@ -56,6 +56,16 @@
         <!-- 氏名 -->
         <p>氏名</p>
         <p class="ps-2">{{ profile.name }}</p>
+
+        <!-- 会社名 -->
+        <label class="d-block">会社名</label>
+        <input
+          type="text"
+          id="field-company"
+          class="form-control"
+          name="company"
+          v-model="registInfo.company"
+        >
       </template>
     </template>
   </div>
@@ -80,7 +90,8 @@ export default {
       ],
       isInputMode: false,
       registInfo: {
-        groupCode: ''
+        groupCode: '',
+        company: ''
       }
     }
   },
