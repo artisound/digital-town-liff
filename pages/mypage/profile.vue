@@ -19,12 +19,12 @@
 
     <!-- 簡易情報 -->
     <div v-if="tab == 'basic'" class="form-fields">
-      <basic
+      <Basic
         :profile="profile"
         :birthday="birthday"
         :mY="mY"
 
-      ></basic>      
+      ></Basic>      
     </div>
 
 
@@ -32,17 +32,17 @@
 
     <!-- 詳細情報 -->
     <div class="" v-else-if="tab === 'detail'">
-      <advance :details="details"></advance>
+      <Advance :details="details"></Advance>
     </div>
 
 
 
     <!-- 家族情報 -->
     <div class="" v-else-if="tab === 'family'">
-      <family
+      <Family
         :family_info_json="family_info_json"
         :mY="mY"
-      ></family>
+      ></Family>
     </div>
 
     <!-- 保存ボタン -->
