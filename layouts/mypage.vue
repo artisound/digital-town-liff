@@ -8,7 +8,7 @@
 <script>
 import pages from '~/assets/json/pages.json';
 export default {
-  name: 'mypage',
+  name: 'MypageLayout',
   head() {
     return {
       title: this.title,

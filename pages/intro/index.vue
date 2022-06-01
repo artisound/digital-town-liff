@@ -73,7 +73,7 @@ import QRCode from 'qrcode'
 const init_url = 'https://liff.line.me/';
 
 export default {
-  layout: 'mypage',
+  layout: 'IntroIndex',
   data() {
     return {
       url: '',
