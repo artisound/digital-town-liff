@@ -134,6 +134,9 @@ export default {
   },
   mounted: async function() {
     // プロフィール詳細情報を取得する
+
+    // テストする場合は以下の処理をコメントアウト解除
+    // this.$set(this.profile, 'name', 'タイム 太郎');
   }
 }
 </script>
