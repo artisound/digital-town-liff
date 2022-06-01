@@ -66,6 +66,16 @@
           name="company"
           v-model="registInfo.company"
         >
+
+        <!-- 住所 -->
+        <label class="d-block">住所</label>
+        <input
+          type="text"
+          id="field-address"
+          class="form-control"
+          name="address"
+          v-model="registInfo.address"
+        >
       </template>
     </template>
   </div>
@@ -91,7 +101,8 @@ export default {
       isInputMode: false,
       registInfo: {
         groupCode: '',
-        company: ''
+        company: '',
+        address: ''
       }
     }
   },
