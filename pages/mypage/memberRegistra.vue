@@ -88,6 +88,10 @@
         <!--業種 -->
         <label class="d-block">役職</label>
         <input type="text" id="field-position" class="form-control" name="position" v-model="registInfo.position">
+
+        <!--業種 -->
+        <label class="d-block">部署</label>
+        <input type="text" id="field-department" class="form-control" name="department" v-model="registInfo.department">
       </template>
     </template>
   </div>
@@ -117,7 +121,8 @@ export default {
         address: '',
         tel: '',
         industry: '',
-        position: ''
+        position: '',
+        department: ''
       }
     }
   },
