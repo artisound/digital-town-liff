@@ -1,5 +1,5 @@
 <template>
-  <div id="" class="card form-fields mx-2 mb-3">
+  <div id="" class="card form-fields mx-2 my-3">
     <div class="card-body p-0">
       <div
         v-for="(family, i) in family_info_json"
