@@ -73,6 +73,11 @@
         <!--業種 -->
         <label class="d-block">部署</label>
         <input type="text" id="field-department" class="form-control" name="department" v-model="registInfo.department">
+
+        <!-- 申請ボタン -->
+        <div class="text-center">
+          <button type="button" class="btn btn-primary">申請</button>
+        </div>
       </template>
     </template>
   </div>
@@ -111,7 +116,7 @@ export default {
     // プロフィールの詳細情報を取得
 
     // テストする場合は以下の処理をコメントアウト解除
-    // this.$set(this.profile, 'name', 'タイム 太郎');
+    this.$set(this.profile, 'name', 'タイム 太郎');
   },
   methods: {
     onEdit() {
