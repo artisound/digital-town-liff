@@ -2,7 +2,7 @@
   <div class="py-2 px-2">
     <!-- プロフィール未設定時の表示 -->
     <template v-if="!Object.keys(profile).length">
-      <p class="my-5 mx-auto w-50">パートナー登録には<br>プロフィールの詳細情報を<br>設定する必要があります</p>
+      <p class="my-5 px-3">パートナー登録にはプロフィールの詳細情報を設定する必要があります</p>
 
       <div class="text-center">
         <button type="button" class="btn btn-primary">設定する</button>

@@ -2,7 +2,7 @@
   <div class="px-2 py-2">
     <!-- プロフィール詳細情報未入力時 -->
     <template v-if="!Object.keys(profile).length">
-      <p class="w-75 my-5 mx-auto px-3">名簿登録申請には<br>プロフィールの詳細情報を<br>設定する必要があります</p>
+      <p class="my-5 px-3">名簿登録申請にはプロフィールの詳細情報を設定する必要があります</p>
       <div class="text-center">
         <button type="button" class="btn btn-primary">設定する</button>
       </div>
