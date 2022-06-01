@@ -1,0 +1,19 @@
+{
+  "mypage": {
+    "title": "Myページ",
+    "children": {
+      "profile": {
+        "title": "プロフィール"
+      },
+      "bbsSettings": {
+        "title": "掲示板管理"
+      },
+      "partner": {
+        "title": "パートナー管理"
+      },
+      "memberRegistra": {
+        "title": "名簿管理"
+      }
+    }
+  }
+}
