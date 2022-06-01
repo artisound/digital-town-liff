@@ -1,5 +1,5 @@
 <template>
-  
+  <div></div>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   props: {
     liffInfo: {
       type: Object,
-      default: {}
+      default: () => ({})
     }
   },
   data() {
@@ -17,6 +17,7 @@ export default {
   },
   mounted: async function() {
     console.log('diagnosis', this.liffInfo)
+    console.log(this.$pageTitle)
   },
   methods: {
   }

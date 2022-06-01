@@ -7,13 +7,14 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
+      liffInfo: {}
     }
   },
   async asyncData() {
-    const liffInfo = await this.$liff();
-    return {
-      liffInfo: liffInfo,
-    }
+    // const liffInfo = await this.$liff();
+    // return {
+    //   liffInfo: liffInfo,
+    // }
   }
 }
 </script>

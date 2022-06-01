@@ -8,7 +8,7 @@ export default {
   props: {
     liffInfo: {
       type: Object,
-      default: {}
+      default: () => ({})
     }
   },
   data() {

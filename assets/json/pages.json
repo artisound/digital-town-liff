@@ -1,4 +1,22 @@
 {
+  "diagnosis": {
+    "title": "脳タイプ診断"
+  },
+  "enquete": {
+    "title": "アンケート"
+  },
+  "entry": {
+    "title": "ジョブエントリー"
+  },
+  "inbox": {
+    "title": "受信Box"
+  },
+  "init": {
+    "title": "初回認証(デジ町)"
+  },
+  "intro": {
+    "title": "紹介"
+  },
   "mypage": {
     "title": "Myページ",
     "children": {
@@ -15,5 +33,8 @@
         "title": "名簿管理"
       }
     }
+  },
+  "submenu": {
+    "title": "メニュー"
   }
 }
