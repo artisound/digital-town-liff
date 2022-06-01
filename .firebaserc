@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "git-tc"
+  },
+  "targets": {
+    "git-tc": {
+      "hosting": {
+        "digitown-liff": [
+          "digital-town-liff"
+        ]
+      }
+    }
+  }
+}
