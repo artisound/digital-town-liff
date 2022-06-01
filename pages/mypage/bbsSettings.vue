@@ -61,14 +61,8 @@
 <script>
 export default {
   layout: 'mypage',
-  head() {
-    return {
-      title: this.title
-    }
-  },
   data() {
     return {
-      title: '掲示板設定',
       profile: {
         nickname: '',
         selfIntro: '',
