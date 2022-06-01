@@ -76,6 +76,10 @@
           name="address"
           v-model="registInfo.address"
         >
+
+        <!-- 電話番号 -->
+        <label class="d-block">電話番号</label>
+        <input type="tel" id="field-tel" class="form-control" name="tel" v-model="registInfo.tel">
       </template>
     </template>
   </div>
@@ -102,7 +106,8 @@ export default {
       registInfo: {
         groupCode: '',
         company: '',
-        address: ''
+        address: '',
+        tel: ''
       }
     }
   },
