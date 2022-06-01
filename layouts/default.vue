@@ -1,4 +1,5 @@
 <template>
+  <!-- <Nuxt /> -->
   <Nuxt :liff-info="liffInfo" />
 </template>
 
@@ -25,11 +26,12 @@ export default {
       liffInfo: {}
     }
   },
-  async asyncData() {
-    // const liffInfo = await this.$liff();
-    // return {
-    //   liffInfo: liffInfo,
-    // }
+  mounted: async function() {
+    this.liffInfo = this.$liff()
+  },
+  async fetch ({ store, params }) {
+    const liffInfo = await this.$liff();
+    store.commit('liffInfo', liffInfo)
   }
 }
 </script>
