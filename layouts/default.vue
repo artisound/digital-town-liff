@@ -1,5 +1,5 @@
 <template>
-  <Nuxt :liff="liffInfo" />
+  <Nuxt :liff-info="liffInfo" />
 </template>
 
 <script>
