@@ -80,6 +80,10 @@
         <!-- 電話番号 -->
         <label class="d-block">電話番号</label>
         <input type="tel" id="field-tel" class="form-control" name="tel" v-model="registInfo.tel">
+
+        <!--業種 -->
+        <label class="d-block">業種</label>
+        <input type="text" id="field-industry" class="form-control" name="industry" v-model="registInfo.industry">
       </template>
     </template>
   </div>
@@ -107,7 +111,8 @@ export default {
         groupCode: '',
         company: '',
         address: '',
-        tel: ''
+        tel: '',
+        industry: ''
       }
     }
   },
