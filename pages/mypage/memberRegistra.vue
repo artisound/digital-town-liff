@@ -44,14 +44,7 @@
         <!-- 団体コード -->
         <span class="field-required badge bg-danger me-2">必須</span>
         <label for="field-group-code" class="d-block m-0 py-2 form-label">団体コード</label>
-        <input
-          type="number"
-          id="field-group-code"
-          class="form-cntrol field-input"
-          name="group-code"
-          min="0"
-          v-model="registInfo.groupCode"
-        >
+        <input type="number" id="field-group-code" class="form-cntrol field-input" name="group-code" min="0" v-model="registInfo.groupCode">
 
         <!-- 氏名 -->
         <label class="d-block">氏名</label>
@@ -59,23 +52,11 @@
 
         <!-- 会社名 -->
         <label class="d-block">会社名</label>
-        <input
-          type="text"
-          id="field-company"
-          class="form-control"
-          name="company"
-          v-model="registInfo.company"
-        >
+        <input type="text" id="field-company" class="form-control" name="company" v-model="registInfo.company">
 
         <!-- 住所 -->
         <label class="d-block">住所</label>
-        <input
-          type="text"
-          id="field-address"
-          class="form-control"
-          name="address"
-          v-model="registInfo.address"
-        >
+        <input type="text" id="field-address" class="form-control" name="address" v-model="registInfo.address">
 
         <!-- 電話番号 -->
         <label class="d-block">電話番号</label>
