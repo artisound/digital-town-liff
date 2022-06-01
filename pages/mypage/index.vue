@@ -28,7 +28,7 @@ export default {
       title: 'トップ',
       menu: [
         { label: 'プロフィール',              to: '/profile', disabled: false },
-        { label: '(準備中)掲示板管理',        to: '/',        disabled: true },
+        { label: '(準備中)掲示板管理',        to: '/bbsSettings',        disabled: false },
         { label: '(準備中)パートナー管理',    to: '/',        disabled: true },
         { label: '(準備中)名簿管理',          to: '/',        disabled: true },
         { label: '(準備中)友達設定',          to: '/',        disabled: true },
