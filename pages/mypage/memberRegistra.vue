@@ -54,7 +54,7 @@
         >
 
         <!-- 氏名 -->
-        <p>氏名</p>
+        <label class="d-block">氏名</label>
         <p class="ps-2">{{ profile.name }}</p>
 
         <!-- 会社名 -->
