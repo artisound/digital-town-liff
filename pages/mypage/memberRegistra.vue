@@ -41,21 +41,45 @@
 
       <!-- 申請画面 -->
       <template v-else>
-        <!-- 団体コード -->
-        <span class="field-required badge bg-danger me-2">必須</span>
-        <label for="field-group-code" class="d-block m-0 py-2 form-label">団体コード</label>
-        <input
-          type="number"
-          id="field-group-code"
-          class="form-cntrol field-input"
-          name="group-code"
-          min="0"
-          v-model="registInfo.groupCode"
-        >
+        <div class="px-3 py-2">
+          <!-- 団体コード -->
+          <span class="field-required badge bg-danger me-2">必須</span>
+          <label for="field-group-code" class="d-block m-0 py-2 form-label">団体コード</label>
+          <input type="number" id="field-group-code" class="form-cntrol field-input" name="group-code" min="0" v-model="registInfo.groupCode">
 
-        <!-- 氏名 -->
-        <p>氏名</p>
-        <p class="ps-2">{{ profile.name }}</p>
+          <!-- 氏名 -->
+          <label class="d-block mt-3">氏名</label>
+          <p class="m-0 ps-2">{{ profile.name }}</p>
+
+          <!-- 会社名 -->
+          <label class="d-block mt-3">会社名</label>
+          <input type="text" id="field-company" class="form-control" name="company" v-model="registInfo.company">
+
+          <!-- 住所 -->
+          <label class="d-block mt-3">住所</label>
+          <input type="text" id="field-address" class="form-control" name="address" v-model="registInfo.address">
+
+          <!-- 電話番号 -->
+          <label class="d-block mt-3">電話番号</label>
+          <input type="tel" id="field-tel" class="form-control" name="tel" v-model="registInfo.tel">
+
+          <!--業種 -->
+          <label class="d-block mt-3">業種</label>
+          <input type="text" id="field-industry" class="form-control" name="industry" v-model="registInfo.industry">
+
+          <!--業種 -->
+          <label class="d-block mt-3">役職</label>
+          <input type="text" id="field-position" class="form-control" name="position" v-model="registInfo.position">
+
+          <!--業種 -->
+          <label class="d-block mt-3">部署</label>
+          <input type="text" id="field-department" class="form-control" name="department" v-model="registInfo.department">
+
+          <!-- 申請ボタン -->
+          <div class="mt-3 text-center">
+            <button type="button" class="btn btn-primary">申請</button>
+          </div>
+        </div>
       </template>
     </template>
   </div>
@@ -64,14 +88,8 @@
 <script>
 export default {
   layout: 'mypage',
-  head() {
-    return {
-      title: this.title
-    }
-  },
   data() {
     return {
-      title: '名簿登録申請',
       profile: {},
       groups: [
         // ダミーデータ
@@ -80,7 +98,13 @@ export default {
       ],
       isInputMode: false,
       registInfo: {
-        groupCode: ''
+        groupCode: '',
+        company: '',
+        address: '',
+        tel: '',
+        industry: '',
+        position: '',
+        department: ''
       }
     }
   },

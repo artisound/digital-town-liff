@@ -99,14 +99,8 @@
 <script>
 export default {
   layout: 'mypage',
-  head() {
-    return {
-      title: this.title
-    }
-  },
   data() {
     return {
-      title: 'パートナー管理',
       profile: {},
       partnerInfo: {
         // 振込先情報

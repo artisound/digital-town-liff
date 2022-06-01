@@ -59,14 +59,8 @@
 <script>
 export default {
   layout: 'mypage',
-  head() {
-    return {
-      title: this.title
-    }
-  },
   data() {
     return {
-      title: 'プロフィール',
       tabs: [
         { label: '簡易情報', key: 'basic' },
         { label: '詳細情報', key: 'detail' },
