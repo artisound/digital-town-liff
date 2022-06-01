@@ -25,6 +25,9 @@ export default {
     script: [
       { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js' },
       { src: 'https://static.line-scdn.net/liff/edge/2/sdk.js', charset: 'utf-8'},
+      { src: "https://cdn.jsdelivr.net/npm/crypto-js@4.x/crypto-js.min.js" },
+      { src: "https://cdn.jsdelivr.net/npm/axios@0.x/dist/axios.min.js" },
+      { src: 'https://timeconcier.jp/forline/tc-digital-town/_src/js/functions.js'}
     ]
   },
 
