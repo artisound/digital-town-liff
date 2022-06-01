@@ -61,7 +61,7 @@ export default {
   },
 
   publicRuntimeConfig: {
-    liffId_top: '1655895861-0nxQr85M'
+    liffId_top: process.env.NODE_ENV == 'development' ? '1655895861-0nxQr85M' : '1655895861-DZnXJ76Y',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
