@@ -88,14 +88,8 @@
 <script>
 export default {
   layout: 'mypage',
-  head() {
-    return {
-      title: this.title
-    }
-  },
   data() {
     return {
-      title: '名簿登録申請',
       profile: {},
       groups: [
         // ダミーデータ
