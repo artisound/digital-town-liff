@@ -79,12 +79,6 @@ import {
 export default {
   layout: 'mypage',
   name: 'DiagnosisIndex',
-  props: {
-    liffInfo: {
-      type: Object,
-      default: () => ({})
-    }
-  },
   validations: {
     userInfo: {
       zip_code: {
@@ -111,10 +105,13 @@ export default {
       inputMode: true,
       numPerPage: 4,
       userInfo: {},
+      liffInfo: {},
       mY: this.$dayjs().format('YYYY')
     }
   },
   mounted: async function() {
+    this.liffInfo = await this.$liff({ redirectUri: this.$config.baseURL + '/diagnosis' });
+    console.log(this.liffInfo);
   },
   methods: {
     date() {

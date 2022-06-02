@@ -65,7 +65,8 @@ export default {
   },
 
   publicRuntimeConfig: {
-    liffId_top: process.env.NODE_ENV == 'development' ? '1655895861-0nxQr85M' : '1655895861-DZnXJ76Y',
+    liffId: process.env.NODE_ENV == 'development' ? '1655895861-0nxQr85M' : '1655895861-DZnXJ76Y',
+    baseURL: process.env.NODE_ENV == 'development' ? 'https://localhost:3000' : 'https://liff.digital-town.jp',
 
     // kintone
     KINTONE_API_URL: 'https://kintone-rest-api-for-tc-dot-apps-for-tc.dt.r.appspot.com/api',

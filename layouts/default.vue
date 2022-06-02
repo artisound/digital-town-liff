@@ -1,6 +1,5 @@
 <template>
-  <!-- <Nuxt /> -->
-  <Nuxt :liff-info="liffInfo" />
+  <Nuxt />
 </template>
 
 <script>
@@ -23,7 +22,6 @@ export default {
   data() {
     return {
       title: this.$pageTitle(),
-      liffInfo: {}
     }
   },
   created: async function() {

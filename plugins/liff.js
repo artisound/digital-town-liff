@@ -8,7 +8,7 @@ export default (context, inject) => {
   const liffInit = async (params = {}) => {
 
     return await liff.init({
-      liffId: params.liffId || context.$config.liffId_top,
+      liffId: params.liffId || context.$config.liffId,
     }).then(async _ => {
       if (liff.isLoggedIn() ) {
         return {
