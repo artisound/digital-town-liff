@@ -163,6 +163,30 @@
         </template>
       </div>
     </template>
+
+    <!-- 診断結果 -->
+    <template v-else-if="displayMode == 2">
+      <div class="text-center">
+        <p class="mt-2">お疲れさまでした。</p>
+        <p>あなたの 脳タイプは・・・</p>
+        <h1 class="m-3 p-1 bg-warning">{{ brainType }}</h1>
+        <p>該当する{{ typeToNumber }}の<br>項目を見てみましょう</p>
+      </div>
+
+      <div
+        class="mt-4 p-3"
+        v-for="(brainTypeInfo, index) in aryBrainTypeInfo"
+        :key="`brain-result${index}`"
+        :style="`background-color: ${brainTypeInfo.bg-color};`"
+      >
+        <h2>{{ brainTypeInfo.brainType }}</h2>
+        <h3 class="mb-3">{{ brainTypeInfo.info }}</h3>
+        <h4>◆特徴</h4>
+        <p v-html="brainTypeInfo.feature"></p>
+        <h4>◆向いている仕事</h4>
+        <p>{{ brainTypeInfo.suitableWork }}</p>
+      </div>
+    </template>
   </div>
 </template>
 
