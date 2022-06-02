@@ -74,6 +74,58 @@
         >はじめる</button>
       </div>
     </template>
+
+    <!-- 詳細画面 -->
+    <template v-else-if="displayMode == 1">
+      <!-- 質問表示 -->
+      <ol
+        class="mt-3 pe-3 fs-4"
+        :start="showNumber === 1 ? showNumber : (showNumber - 1) * numPerPage + 1"
+      >
+        <li
+          class="mb-3"
+          v-for="(list, index) in showItems"
+          :key="`diagnosis${index}`"
+          style="font-size: 1rem;"
+        >
+          <p class="mb-1">{{ list.text }}</p>
+          <!-- 選択肢一覧 -->
+          <div class="btn-group text-center w-100">
+            <!-- はい -->
+            <input type="radio" class="btn-check" v-model="list.val" :id="`${list.id}a`" value="2">
+            <label :for="`${list.id}a`" class="btn btn-outline-primary" style="line-height: 42px; font-size: 18px;">はい</label>
+            <!-- どちらでもない -->
+            <input type="radio" class="btn-check" v-model="list.val" :id="`${list.id}b`" value="1">
+            <label :for="`${list.id}b`" class="btn btn-outline-primary" style="font-size: 14px;">どちら<br>でもない</label>
+            <!-- いいえ -->
+            <input type="radio" class="btn-check" v-model="list.val" :id="`${list.id}c`" value="0">
+            <label :for="`${list.id}c`" class="btn btn-outline-primary" style="line-height: 42px; font-size: 18px;">いいえ</label>
+          </div>
+        </li>
+      </ol>
+
+      <!-- 前・次ボタン -->
+      <div class="mb-4 text-center">
+        <!-- 前へボタン -->
+        <button
+          class="btn btn-outline-primary btn-lg"
+          :class="{invisible: showNumber == 1}"
+          style="font-size: 1rem;"
+          @click="btnAction($event, 'prev')"
+        >前へ</button>
+
+        <!-- ページ表示 -->
+        <span class="my-0 mx-2">{{ showNumber }}/{{ endNumber }}</span>
+        
+        <!-- 次へボタン -->
+        <button
+          class="btn btn-outline-primary btn-lg"
+          :class="{invisible: showNumber == endNumber}"
+          style="font-size: 1rem;"
+          @click="btnAction($event, 'nuxt')"
+        >次へ</button>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -127,6 +179,23 @@ export default {
     },
     async onstart() {
 
+    },
+    /** ==========================================================================
+      * ボタン処理
+      * @param {object} e 選択されたDOM
+      * @param {string} act アクション名
+      ========================================================================== */
+    async btnAction(e, act) {
+      switch (act) {
+        // 前のページを表示する
+        case 'prev':
+          break;
+        // 次のページを表示する
+        case 'next':
+          break;
+        default:
+          break;
+      }
     }
   }
 }
