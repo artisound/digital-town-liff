@@ -137,6 +137,31 @@
         <div class="label">現在設定されているモード</div>
         <input type="text" id="form-modeVal">
       </div>
+
+      <!-- キャンセル・保存ボタン -->
+      <div class="row mt-0 mb-5 mx-auto px-3 w-100">
+        <!-- キャンセルボタン -->
+        <div class="col-6 mx-auto p-0 pe-2">
+          <button
+            class="btn btn-secondary btn-lg w-100"
+            id="btn-cancel"
+            style="font-size: 1rem;"
+            @click="onCancel()"
+          >キャンセル</button>
+        </div>
+
+        <!-- 保存ボタン -->
+        <template v-if="showNumber == endNumber">
+          <div class="col-6 p-0 ps-2">
+            <button
+              class="btn btn-primary btn-lg w-100"
+              id="btn-send"
+              style="font-size: 1rem;"
+              @click="btnAction($event, 'regi')"
+            >保存</button>
+          </div>
+        </template>
+      </div>
     </template>
   </div>
 </template>
