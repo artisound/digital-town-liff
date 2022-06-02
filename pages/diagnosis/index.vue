@@ -65,6 +65,14 @@
           </template>
         </div>
       </template>
+
+      <div class="mt-5 text-center">
+        <button
+          class="btn btn-outline-primary btn-lg bg-white"
+          style="font-size: 1rem;"
+          @click="onStart()"
+        >はじめる</button>
+      </div>
     </template>
   </div>
 </template>
@@ -116,6 +124,9 @@ export default {
   methods: {
     date() {
       return outputMaxDayByYm(this.userInfo.birth_year, this.userInfo.birth_month);
+    },
+    async onstart() {
+
     }
   }
 }
