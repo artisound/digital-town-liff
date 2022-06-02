@@ -125,6 +125,18 @@
           @click="btnAction($event, 'nuxt')"
         >次へ</button>
       </div>
+
+      <!-- 隠し要素 -->
+      <div class="d-none">
+        <div class="label">LINEユーザーID</div>
+        <input type="text" id="form-lineId" v-model="lineUserId">
+        <div class="label">レコード番号</div>
+        <input type="text" id="form-recId">
+        <div class="label">表示中のモード</div>
+        <input type="text" id="form-mode">
+        <div class="label">現在設定されているモード</div>
+        <input type="text" id="form-modeVal">
+      </div>
     </template>
   </div>
 </template>
