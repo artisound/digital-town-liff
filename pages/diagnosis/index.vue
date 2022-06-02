@@ -77,6 +77,7 @@ import {
 } from "vuelidate/lib/validators";
 
 export default {
+  layout: 'mypage',
   name: 'DiagnosisIndex',
   props: {
     liffInfo: {
