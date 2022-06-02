@@ -186,6 +186,11 @@
         <h4>◆向いている仕事</h4>
         <p>{{ brainTypeInfo.suitableWork }}</p>
       </div>
+
+      <button
+        class="btn btn-outline-primary btn-lg bg-white my-4 px-1 w-50"
+        @click="onCancel()"
+      >閉じる</button>
     </template>
   </div>
 </template>
