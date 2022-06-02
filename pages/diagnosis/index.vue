@@ -45,7 +45,7 @@
             <!-- 年選択 -->
             <select name="birth_year" class="form-select" v-model="$v.userInfo.$model.birth_year" @change="$v.userInfo.birth_year.$touch();">
               <option value="0" selected>- 年 -</option>
-              <option v-for="yyyy in 120" :key="yyyy" :value="mY - yyyy + 1">{{ mY - yyyy + 1 }}</option>
+              <option v-for="yyyy in 120" :key="yyyy" :value="mY - yyyy + 1">{{ mY - yyyy + 1 }}年</option>
             </select>
 
             <!-- 月選択 -->
@@ -57,7 +57,7 @@
             <!-- 日選択 -->
             <select name="birth_date" class="form-select" v-model="$v.userInfo.$model.birth_date" @change="$v.userInfo.birth_date.$touch();">
               <option value="0" selected>- 日 -</option>
-              <option v-for="d of outputMaxDayByYm(userInfo.birth_year, userInfo.birth_month)" :key="d" :value="d">{{ d }}日</option>
+              <option v-for="d of date" :key="d" :value="d">{{ d }}日</option>
             </select>
           </div>
           <template v-if="$v.userInfo.birth_year.$error || $v.userInfo.birth_month.$error || $v.userInfo.birth_date.$error">
@@ -70,6 +70,12 @@
 </template>
 
 <script>
+import {
+  required,
+  minLength,
+  minValue
+} from "vuelidate/lib/validators";
+
 export default {
   name: 'DiagnosisIndex',
   props: {
@@ -78,17 +84,41 @@ export default {
       default: () => ({})
     }
   },
+  validations: {
+    userInfo: {
+      zip_code: {
+        required, // 必須
+        minLength: minLength(8), // 8文字未満でエラー
+      },
+      birth_year: {
+        required, // 必須
+        minValue: minValue(1900), // 1900未満でエラー
+      },
+      birth_month:{
+        required, // 必須
+        minValue: minValue(1), // 1未満でエラー
+      },
+      birth_date: {
+        required, // 必須
+        minValue: minValue(1), // 1未満でエラー
+      },
+    }
+  },
   data() {
     return {
       displayMode: 0,
       inputMode: true,
       numPerPage: 4,
-      userInfo: {}
+      userInfo: {},
+      mY: this.$dayjs().format('YYYY')
     }
   },
   mounted: async function() {
   },
   methods: {
+    date() {
+      return outputMaxDayByYm(this.userInfo.birth_year, this.userInfo.birth_month);
+    }
   }
 }
 </script>
