@@ -26,12 +26,9 @@ export default {
       liffInfo: {}
     }
   },
-  mounted: async function() {
-    this.liffInfo = this.$liff()
+  created: async function() {
   },
-  async fetch ({ store, params }) {
-    const liffInfo = await this.$liff();
-    store.commit('liffInfo', liffInfo)
-  }
+  mounted: async function() {
+  },
 }
 </script>
